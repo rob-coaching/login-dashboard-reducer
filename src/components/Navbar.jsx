@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { DataContext } from "../DataProvider";
+import { DataContext } from "../store/DataProvider";
 
 export const Navbar = () => {
   const {

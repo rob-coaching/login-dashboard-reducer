@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { Navigate } from "react-router-dom";
-import { DataContext } from "../DataProvider";
+import { DataContext } from "../store/DataProvider";
 
 export const ProtectedRoute = ({ children }) => {
   const {

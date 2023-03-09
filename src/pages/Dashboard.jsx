@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { DataContext } from "../DataProvider";
+import { DataContext } from "../store/DataProvider";
 
 export const Dashboard = () => {
 
