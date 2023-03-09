@@ -1,15 +1,9 @@
-import { useContext } from "react";
-import { Navigate } from "react-router-dom";
-import { DataContext } from "../DataProvider";
 
 export const ProtectedRoute = ({ children }) => {
-  const {
-    state: { user },
-  } = useContext(DataContext); 
 
-  if(!user) {
-    return <Navigate to="/"></Navigate>
-  }
+  // TODO: check if user is logged in (= user exists in state)
+  // TODO: if not logged in: forward to login route
 
+  // if logged in: give access to page (= render given page!)
   return children
 }

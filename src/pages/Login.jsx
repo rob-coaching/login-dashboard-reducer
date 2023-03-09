@@ -1,35 +1,23 @@
-import { useContext, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { DataContext } from "../DataProvider";
+import { useState } from "react";
 
 export const Login = () => {
-
-  const { dispatch } = useContext(DataContext)
 
   const [email, setEmail] = useState();
   const [pw, setPw] = useState();
   const [error, setError] = useState("")
 
-  const navigate = useNavigate();
-
   const onLoginSubmit = (e) => {
     e.preventDefault();
 
-    if(email !== "rob" || pw !== "123") {
-      return setError("Wrong creds, my dude")
+    // perform login at "backend" here 
+    // => holy fake backend in this case :D 
+    // usually we would make a POST fetch call here...
+    // (e.g. using /lib/helpers.js)
+
+    if (email !== "rob" || pw !== "123") {
+      return setError("Wrong creds, my dude");
     }
-
-    dispatch({
-      type: "USER_SET",
-      payload: {
-        _id: "u1",
-        username: "robbos",
-        email: email,
-        avatar: "https://source.unsplash.com/100x100?avatar-guest",
-      },
-    });
-
-    navigate("/dashboard");
+    console.log("Eingeloggt! Ich will jetzt zum f*** Dashboard weiter!")
   };
 
   return (
